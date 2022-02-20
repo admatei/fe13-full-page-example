@@ -1,0 +1,122 @@
+@import 'colors';
+@import 'spacings';
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 932px;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .hero {
+        height: 650px;
+        background-image: linear-gradient(0, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%), url('../images/desktop/image-hero.jpg');
+
+        h1 {
+            width: 50%;
+            transform: translateY(-25%);
+        }
+
+        button {
+            display: none;
+        }
+
+        nav {
+            color: $white;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+    .interactive {
+        .container {
+            position: relative;
+        }
+
+        img {
+            margin: 0;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .text {
+            background-color: $white;
+            z-index: 2;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            text-align: left;
+            padding: $spacing-xl 0 0 $spacing-xl;
+        }
+    }
+
+    .our-creations {
+        margin-top: $spacing-xxl;
+        
+        .container {
+            position: relative;
+            align-items: flex-start;
+
+            .creations {
+                grid-template-columns: repeat(3, 1fr);
+            }
+    
+            h2 {
+                text-align: left;
+            }
+    
+            button {
+                position: absolute;
+                right: 0;
+                top: $spacing-base;
+            }
+        }
+    }
+
+    footer .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        > a {
+            order: 1;
+        }
+
+        .social-icons {
+            order: 2;
+            justify-content: flex-end;
+        }
+
+        nav {
+            order: 3;
+            margin-top: $spacing-md;
+
+            ul {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                margin: 0;
+
+                li {
+                    margin: 0;
+                }
+            }
+        }
+
+        p {
+            order: 4;
+            margin-bottom: 0;
+            margin-top: $spacing-lg;
+            text-align: right;
+        }
+    }
+}

@@ -1,0 +1,152 @@
+@import 'colors';
+@import 'typography';
+@import 'spacings';
+@import 'base';
+@import 'mixins';
+
+.hero {
+    background-image: url('../images/mobile/image-hero.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding-top: $spacing-lg;
+    position: relative;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    h1 {
+        color: $white;
+        border: 2px solid $white;
+        margin: 0;
+        padding: $spacing-md;
+        position: absolute;
+        width: calc(100% - 2 * #{$container-spacing});
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+.interactive {
+    margin-top: $spacing-xxl;
+
+    img {
+        margin: 0 auto;
+    }
+
+    h2 {
+        margin: $spacing-lg 0 $spacing-md;
+    }
+
+    .text {
+        padding: 0 $spacing-md;
+        text-align: center;
+    }
+
+    p {
+        color: $darkGray;
+        margin-bottom: 0;
+    }
+}
+
+.our-creations {
+    margin-top: $spacing-xxl;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        h2 {
+            text-align: center;
+        }
+    
+        .creations {
+            width: 100%;
+        }
+    
+        article {
+            height: 180px;
+            margin-bottom: $spacing-md;
+            background-position: top center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: $spacing-md;
+    
+            h3 {
+                color: $white;
+                margin: 0;
+                width: 50%;
+            }
+
+            @include images('mobile');
+        }
+    
+        button {
+            background-color: $white;
+            border: 1px solid $black;
+            padding: $spacing-base $spacing-lg;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s linear;
+            cursor: pointer;
+    
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+        }
+    
+    }
+}
+
+footer {
+    background-color: $black;
+    margin-top: $spacing-xxl;
+    text-align: center;
+    padding: $spacing-lg 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+        margin: $spacing-lg 0;
+
+        li:not(:last-child) {
+            margin-bottom: $spacing-base;
+        }
+    }
+
+    nav {
+        color: $white;
+    }
+
+    p {
+        color: $darkGray;
+        margin-top: $spacing-base;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 15px;
+    }
+}
